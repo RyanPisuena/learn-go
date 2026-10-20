@@ -1,0 +1,10 @@
+# Upstream GoForGo content (not ours)
+solutions/
+*.toml
+.cursor/
+
+# Track only Go sources and modules under exercises/
+exercises/**/*
+!exercises/**/
+!exercises/**/*.go
+!exercises/**/go.mod
