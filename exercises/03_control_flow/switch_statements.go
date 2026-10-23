@@ -39,13 +39,6 @@ func main() {
 		fmt.Println("Invalid grade")
 	}
 	
-	// TODO: Write a switch statement with no expression (works like if-else if)
-	// Check score ranges:
-	// score >= 90: "Outstanding"
-	// score >= 80: "Very Good"  
-	// score >= 70: "Good"
-	// score >= 60: "Satisfactory"
-	// default: "Needs work"
 	switch {
 	case score >= 90:
 		fmt.Println("Outstanding")
@@ -59,14 +52,29 @@ func main() {
 		fmt.Println("Needs Work")
 	}
 	
-	// TODO: Write a switch with fallthrough
-	// For day value:
-	// case 1: print "Start of work week" and fallthrough to next case
-	// case 2, 3, 4: print "Weekday"
-	// case 5: print "TGIF!"
-	// case 6, 7: print "Weekend"
+	switch day {
+	case 1:
+		fmt.Println("Start of work week")
+		fallthrough
+	case 2,3,4:
+		fmt.Println("Weekday")
+	case 5:
+		fmt.Println("TGIF!")
+	case 6,7:
+		fmt.Println("Weekend")		
+	}
 	
-	// TODO: Write a switch with initialization
-	// Initialize x := score / 10 in the switch
-	// Use x for cases: 10,9: "A", 8: "B", 7: "C", 6: "D", default: "F"
+
+	switch x := score; x {
+	case 10,9:
+		fmt.Println("A")
+	case 8:
+		fmt.Println("B")
+	case 7:
+		fmt.Println("C")
+	case 6:
+		fmt.Println("D")
+	default:
+		fmt.Println("F")
+	}
 }
