@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	
-	for element := range numbers {
+	for _, element := range numbers {
 		if(element > 5) {
 			fmt.Println("Found number greater than 5: ", element)
 			break
@@ -14,7 +14,7 @@ func main() {
 	
 	// TODO: Use a for loop with continue to print only even numbers from numbers slice
 	// Skip odd numbers using continue
-	for element := range numbers {
+	for _, element := range numbers {
 		if(element % 2 != 0) { 
 			continue
 		}
