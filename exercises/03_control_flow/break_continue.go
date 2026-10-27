@@ -18,14 +18,18 @@ func main() {
 		if(element % 2 != 0) { 
 			continue
 		}
-		print(element)
+		fmt.Println(element)
 	}
 	
-	// TODO: Use nested loops with labeled break
-	// Outer loop: i from 1 to 3
-	// Inner loop: j from 1 to 3
-	// Print i*j, but break out of BOTH loops when i*j >= 4
-	// Use label: OuterLoop:
+	OuterLoop:
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 3; j++ {
+			fmt.Println(i*j) 
+			if i*j >= 4 {
+				break OuterLoop
+			}
+		}
+	}
 	
 	// TODO: Use nested loops with labeled continue  
 	// Outer loop: i from 1 to 3
